@@ -562,6 +562,7 @@ module DocusignRest
         \"emailSubject\"  : \"#{options[:email][:subject]}\",
         \"templateId\"    : \"#{options[:template_id]}\",
         \"templateRoles\" : [#{get_template_roles(options[:signers])}],
+        \"enableWetSign\" : [#{options[:enable_wet_sign]}],
        }"
 
       uri = build_uri("/accounts/#{@acct_id}/envelopes")
